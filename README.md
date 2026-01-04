@@ -73,6 +73,7 @@ Each preprocessed sample is stored as a 3D NIfTI volume with the following prope
 - Coordinate space: `MNI152`
 
 ## Data Licensing and Availability
-> **ADNI** (https://adni.loni.usc.edu): Data usage is governed by the ADNI Data Use Agreement
-> 
-> **AIBL** (https://aibl.csiro.au): Data usage follows AIBL access and licensing policies
+>- **ADNI** (https://adni.loni.usc.edu): data are subject to the ADNI Data Use Agreement and require user registration and approval.
+  Redistribution of raw or derived data is not permitted.
+>- **AIBL** (https://aibl.csiro.au): data are distributed under controlled access policies managed by the AIBL study.
+  Users must obtain appropriate authorization prior to data usage.
