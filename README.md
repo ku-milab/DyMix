@@ -13,13 +13,15 @@ This repository provides the official implementation of DyMix, a dynamic frequen
 DyMix is designed to address domain shift in multi-site MRI data by dynamically adjusting the frequency mixing region during training.
 The framework consists of two stages:
 
-1. **Pretraining stage**
+**Step 1: Pretraining stage**
   - Coarse intensity augmentation via amplitude–phase recombination (APR)
   - Self-adversarial learning for intensity-invariant feature extraction
 
-2. **Adaptation stage**
+**Step 2: Adaptation stage**
   - Dynamic frequency Mixup guided by a validation-based scheduler
   - Fine-grained frequency alignment between source and target domains
+
+<img width="1590" height="1035" alt="Image" src="https://github.com/user-attachments/assets/44eaeba8-c202-4ae8-a27a-0cd991d8ee8f" />
 
 ## Data Preprocessing Pipeline
 This repository provides the complete preprocessing pipeline used in our experiments on the **ADNI** and **AIBL** datasets.
