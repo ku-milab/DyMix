@@ -10,13 +10,13 @@ import os
 from torchvision.transforms import Compose, ToTensor
 # from transform import source_transform, adapt_transform
 from tqdm import tqdm
-import model
-from utils import loop_iterable, set_requires_grad
-from utils import GradientReversal, loop_iterable
-from fourier import *
+import Model
+from Utils.utils import loop_iterable, set_requires_grad
+from Utils.utils import GradientReversal, loop_iterable
+from Utils.fourier import *
 from sklearn.metrics import confusion_matrix, roc_auc_score
-from dataset import minmax_scaler
-import dataset
+from Data.dataset import minmax_scaler
+import Data.dataset as dataset
 import GPUtil
 import random
 import fft_model
@@ -36,7 +36,7 @@ def parse_args():
     # gpu id number
 
     parser.add_argument('--model_name', type=str, default='adapt')
-    # model save name
+    # Model save name
 
     parser.add_argument('--batch_size', type=int, default=4)
     # batch size
@@ -196,7 +196,7 @@ for epoch in range(0, args.epochs):
         f'val_loss = {val_loss: .4f} , val_acc = {val_acc:.4f} , val_auc = {val_auc:.4f}')
 
     # if val_auc > best_auc:
-    #     tqdm.write(f'Saving model... Selection: val_auc')
+    #     tqdm.write(f'Saving Model... Selection: val_auc')
     #     best_auc = val_auc
     #     torch.save(net.state_dict(), "models/adapt/{}/{}_dymix_auc_r{}.pt".format(args.task, args.model_name, best_lambda))
 
@@ -235,4 +235,3 @@ for epoch in range(0, args.epochs):
                     if best_lambda < min_region:
                         print(f"Region approached to min_region {min_region}")
                         best_lambda = min_region
-        

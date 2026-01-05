@@ -10,11 +10,11 @@ import numpy as np
 import os
 from time import time
 from tqdm import tqdm
-import dataset
-from dataset import minmax_scaler
-from fourier import *
-from utils import GradientReversal,loop_iterable
-from transform import intensity_transform
+import Data.dataset as dataset
+from Data.dataset import minmax_scaler
+from Utils.fourier import *
+from Utils.utils import GradientReversal,loop_iterable
+from Utils.transform import intensity_transform
 import fft_model
 import GPUtil
 import torch.cuda
@@ -37,7 +37,7 @@ def parse_args():
     # gpu id number
 
     parser.add_argument('--model_name', type=str, default='source_pretrain')
-    # model save name
+    # Model save name
 
     parser.add_argument('--batch_size', type=int, default=4)
     # batch size
@@ -85,7 +85,7 @@ train_loader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, 
 val_loader = torch.utils.data.DataLoader(dataset, batch_size=args.batch_size, drop_last=False,
                             sampler=SubsetRandomSampler(val_idx))
 
-print('data loading done...\n')
+print('Data loading done...\n')
 net = fft_model.Net(dropout=0.5)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

@@ -3,11 +3,11 @@ import torch.nn.functional as F
 import numpy as np
 import scipy.io as sio
 import os
-import dataset
-from model import Net
+import Data.dataset as dataset
+from Model import Net
 from sklearn.metrics import confusion_matrix, roc_auc_score
 #from transform import source_transform, adapt_transform
-from dataset import minmax_scaler
+from Data.dataset import minmax_scaler
 from tqdm import tqdm
 import GPUtil
 import random
@@ -27,7 +27,7 @@ def parse_args():
     # gpu id number
 
     parser.add_argument('--model_name', type=str, default='source_disentangle')
-    # model save name
+    # Model save name
 
     parser.add_argument('--batch_size', type=int, default=1)
     # batch size
@@ -69,7 +69,7 @@ net = fft_model.Net(dropout=0.5)
 net.to(device)
 net.load_state_dict(torch.load(MODEL_FILE))
 net.eval()
-print('Test a model on the target domain...')
+print('Test a Model on the target domain...')
 correct = 0
 total = 0
 
