@@ -21,7 +21,7 @@ The framework consists of two stages:
   - Dynamic frequency Mixup guided by a validation-based scheduler
   - Fine-grained frequency alignment between source and target domains
 
-<img width="1590" height="1035" alt="Image" src="https://github.com/user-attachments/assets/44eaeba8-c202-4ae8-a27a-0cd991d8ee8f" />
+<img width="1721" height="1768" alt="Image" src="https://github.com/user-attachments/assets/60340fc4-ceb6-4cf9-90ea-779ca105c6b4" />
 
 ## Data Preprocessing Pipeline
 This repository provides the complete preprocessing pipeline used in our experiments on the **ADNI** and **AIBL** datasets.
