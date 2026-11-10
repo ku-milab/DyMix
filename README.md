@@ -1,6 +1,6 @@
 # DyMix
 
-This repository provides the official implementation of DyMix, a dynamic frequency Mixup scheduling strategy for unsupervised domain adaptation (UDA) in medical image classification, as described in the following paper:
+This repository provides the official implementation of DyMix, a dynamic frequency Mixup scheduling strategy for unsupervised domain adaptation (UDA) in medical image classification, as described in the following paper: 
 > **DyMix: Dynamic Frequency Mixup Scheduler based Unsupervised Domain Adaptation for Enhancing Alzheimer's Disease Prediction**<br>
 > [Kwanseok Oh](https://scholar.google.co.kr/citations?user=EMYHaHUAAAAJ&hl=ko)<sup>1</sup>, [Yooseung Shin](https://scholar.google.co.kr/citations?user=yCvN9Z8AAAAJ&hl=ko)<sup>1, 2</sup>, and [Heung-Il Suk](https://scholar.google.co.kr/citations?user=dl_oZLwAAAAJ&hl=ko)<sup>1</sup><br/>
 > (<sup>1</sup>Department of Artificial Intelligence, Korea University) <br/>
