@@ -5,6 +5,7 @@ This repository provides the official implementation of DyMix, a dynamic frequen
 > [Kwanseok Oh](https://scholar.google.co.kr/citations?user=EMYHaHUAAAAJ&hl=ko)<sup>1</sup>, [Yooseung Shin](https://scholar.google.co.kr/citations?user=yCvN9Z8AAAAJ&hl=ko)<sup>1, 2</sup>, and [Heung-Il Suk](https://scholar.google.co.kr/citations?user=dl_oZLwAAAAJ&hl=ko)<sup>1</sup><br/>
 > (<sup>1</sup>Department of Artificial Intelligence, Korea University) <br/>
 > (<sup>2</sup>Heuron Company Ltd.) <br/>
+> Published in Pattern Recognition: https://www.sciencedirect.com/science/article/pii/S0031320326016833 <br/>
 > 
 > **Abstract:** *Recent advances in deep learning (DL) have substantially improved the accuracy of Alzheimer’s disease (AD) diagnosis from brain images, enabling earlier and more reliable clinical interventions. Nevertheless, most DL-based models often suffer from significant performance degradation when applied to unseen domains owing to variations in data distributions, a challenge commonly referred to as domain shift. To address this issue, we propose DyMix, a dynamic frequency Mixup scheduler for unsupervised domain adaptation (UDA). Built upon a Fourier transformation, DyMix dynamically adjusts the frequency components between source and target domains within selected regions, allowing the model to efficiently capture domain-relevant information. To further enhance robustness, DyMix incorporates intensity-invariant learning and self-adversarial regularization, encouraging the extraction of stable and domain-invariant feature representations. Such an adaptive framework enables robust cross-domain generalization by dynamically aligning domain-specific frequency characteristics while maintaining informative disease-relevant representations. Extensive experiments on two benchmark datasets (i.e., ADNI and AIBL) demonstrate that DyMix consistently outperforms state-of-the-art UDA methods for AD diagnosis. As a result, our method has achieved average performance gains of +6.04% in accuracy and +5.88% in AUC compared to the mean score of all baseline methods across multiple cross-domain scenarios.*
 >
@@ -77,3 +78,24 @@ Each preprocessed sample is stored as a 3D NIfTI volume with the following prope
   Redistribution of raw or derived data is not permitted.
 >- **AIBL** (https://aibl.csiro.au): data are distributed under controlled access policies managed by the AIBL study.
   Users must obtain appropriate authorization prior to data usage.
+
+## Citation
+If you find this work useful for your research, please cite the following paper:
+
+```
+@article{OH2027114719,
+title = {DyMix: Dynamic frequency Mixup scheduler based unsupervised domain adaptation for enhancing Alzheimer’s disease prediction},
+journal = {Pattern Recognition},
+volume = {182},
+pages = {114719},
+year = {2027},
+issn = {0031-3203},
+doi = {https://doi.org/10.1016/j.patcog.2026.114719},
+url = {https://www.sciencedirect.com/science/article/pii/S0031320326016833},
+author = {Kwanseok Oh and Yooseung Shin and Heung-Il Suk},
+keywords = {Alzheimer’s disease, Unsupervised domain adaptation, Structural MRI, Dynamic frequency-adaptive manipulation},
+}
+```
+
+## Acknowledgements
+This work was supported by Institute of Information & communications Technology Planning & Evaluation (IITP) grant funded by the Korea government (MSIT) No. RS-2019-II190079 (Artificial Intelligence Graduate School Program (Korea University)), No. RS-2022-II220959 ((Part 2) Few-Shot Learning of Causal Inference in Vision and Language for Decision Making), and No. RS-2024-00457882 (National AI Research Lab Project).
